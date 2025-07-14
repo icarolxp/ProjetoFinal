@@ -49,25 +49,12 @@ O projeto foi desenvolvido seguindo uma abordagem modular, separando as funciona
     git clone [https://github.com/icarolxp/ProjetoFinal.git](https://github.com/icarolxp/ProjetoFinal.git)
     cd ProjetoFinal
     ```
-2.  **Instale as dependências (se houver, adicione um `requirements.txt`):**
+2.  **Instale as dependências:**
     ```bash
     # Exemplo:
     # pip install pandas matplotlib
     ```
-3.  **Execute o peer (no terminal):**
-    ```bash
-    python main.py
-    ```
-    Ou inicie cada módulo conforme sua estrutura.
 
-    Para o módulo P2P, você iniciaria o peer e depois conectaria a outros peers conforme a lógica do `main.py`:
-    ```bash
-    # Exemplo de interação no terminal após iniciar main.py
-    # Digite a porta para este peer: 8000
-    # Comandos: conectar <host> <porta> | bloco <dados> | sair
-    # >>> conectar localhost 8001
-    # >>> bloco Minha primeira transacao
-    ```
 
 ---
 
