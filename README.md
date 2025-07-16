@@ -16,10 +16,11 @@ O desenvolvimento deste projeto utilizou as seguintes ferramentas e linguagens:
 * **GitHub**: Plataforma para hospedagem de código e colaboração.
 * **Terminal (Linux/WSL)**: Ambiente de linha de comando utilizado para interagir com o Git e executar o projeto.
 * **Nano**: Editor de texto utilizado no terminal para mensagens de commit e merge.
+* **VsCode**:  O Visual Studio Code oferece integração nativa com sistemas de controle de versão, como o Git, tornando mais fácil para gerenciar e rastrear as mudanças no código-fonte.
 
 ---
 
-## 👨‍💻 Processo de Codificação e Desenvolvimento
+## Processo de Codificação e Desenvolvimento 
 
 O projeto foi desenvolvido seguindo uma abordagem modular, separando as funcionalidades em arquivos Python distintos para melhor organização e manutenção:
 
