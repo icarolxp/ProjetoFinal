@@ -1,5 +1,3 @@
-# estacao.py
-
 import pandas as pd
 import unicodedata
 
@@ -20,7 +18,6 @@ class EstacaoMeteorologica:
         # Converte a coluna 'data' para o tipo datetime
         df_original["data"] = pd.to_datetime(df_original["data"], errors="coerce")
         self.df = df_original
-        print("COLUNAS DETECTADAS PELO PROGRAMA:", self.df.columns.tolist())
     def _normalizar(self, nome_coluna):
         """
         Normaliza uma string para um formato de nome de coluna Pythonico.
