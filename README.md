@@ -1,7 +1,7 @@
 # ProjetoFinal
 Um sistema de análise climática , capaz de: Ler e processar dados meteorológicos de arquivos CSV. Realizar análises estatísticas e gerar visualizações. Aplicar conceitos de Programação Orientada a Objetos (POO) . Utilizar Programação Funcional para transformar e filtrar dados. Utilizar Pandas e Numpy para manipulação eficiente dos dados.
 
-Este repositório contém o código-fonte de um projeto de processamento e visualização de dados, focado em analisar informações sobre estações meteorológicas e dados climáticos. O projeto inclui módulos para análise, simulação de estação e visualização de dados.
+Este repositório contém o código-fonte de um projeto de processamento e visualização de dados, focado em analisar informações sobre estações meteorológicas e dados climáticos. O projeto inclui módulos para análise e visualização de dados.
 
 ---
 
@@ -26,9 +26,9 @@ O desenvolvimento deste projeto utilizou as seguintes ferramentas e linguagens:
 O projeto foi desenvolvido seguindo uma abordagem modular, separando as funcionalidades em arquivos Python distintos para melhor organização e manutenção:
 
 2.  **Módulos de Análise e Visualização (Presença de Arquivos):**
-    * `analisador.py`: Presumivelmente, contém lógica para processar e extrair insights dos dados.
+    * `analisador.py`: Contém lógica para processar e extrair insights dos dados.
     * `estacao.py`: Pode simular ou interagir com dados de uma estação meteorológica.
-    * `visualizador.py`: Provavelmente responsável por apresentar os dados de forma gráfica ou textual.
+    * `visualizador.py`: Responsável por apresentar os dados de forma gráfica ou textual.
     * `app.py`: O ponto de entrada principal para executar o projeto e suas funcionalidades.
 
 3.  **Gestão de Dados:**
