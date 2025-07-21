@@ -1,11 +1,7 @@
-# visualizador.py (versão com dashboard híbrido)
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 import constantes as const
 from matplotlib.patches import Patch
-
-# NOVAS IMPORTAÇÕES NECESSÁRIAS PARA O DASHBOARD HÍBRIDO
 import matplotlib.gridspec as gridspec
 import numpy as np
 
@@ -105,9 +101,6 @@ class VisualizadorClimatico:
         fig.tight_layout(rect=[0, 0.03, 1, 0.95])
         return fig
 
- 
-# Em visualizador.py, substitua o método antigo pela versão final:
-
     def plotar_dashboard_hibrido(self, estatisticas_dict):
         """
         Cria um dashboard com 4 cartões de indicadores (KPIs) para as
@@ -124,14 +117,12 @@ class VisualizadorClimatico:
         fig.suptitle('Dashboard Climático do Período', fontsize=20, weight='bold')
         gs = gridspec.GridSpec(2, 2, figure=fig, hspace=0.3, wspace=0.3)
 
-        # --- ALTERAÇÃO A: A função agora aceita um parâmetro 'sufixo' ---
         def criar_indicador(ax, titulo, subtitulo, valor, formato, cor_base, sufixo=""):
             """Função auxiliar que agora pode adicionar um sufixo (ex: % ou °C) ao valor."""
             ax.set_facecolor(f'#{cor_base}20')
             ax.text(0.5, 0.75, titulo, ha='center', va='center', fontsize=16, color='#333')
             ax.text(0.5, 0.58, subtitulo, ha='center', va='center', fontsize=10, color='#666')
             
-            # --- ALTERAÇÃO B: O sufixo é adicionado ao final da string formatada ---
             texto_valor = f"{valor:{formato}}{sufixo}"
             
             ax.text(0.5, 0.25, texto_valor, ha='center', va='center',
@@ -142,7 +133,6 @@ class VisualizadorClimatico:
                 spine.set_edgecolor(f'#{cor_base}80')
                 spine.set_linewidth(2)
 
-        # --- ALTERAÇÃO C: o 'sufixo' desejado nas chamadas da função ---
         ax1 = fig.add_subplot(gs[0, 0])
         criar_indicador(ax1, 'Temperatura Média', '(Graus Celsius)', media_temp, '.2f', 'ffb703', sufixo=" °C")
 
@@ -221,7 +211,6 @@ class VisualizadorClimatico:
         sns.set_theme(style=style)
         fig, ax = self._criar_figura_e_eixo()
 
-        # O plot do histograma permanece o mesmo
         sns.histplot(self.dados[coluna], kde=True, ax=ax, edgecolor='black', alpha=0.7, color='skyblue')
 
         ax.set_title(f"Histograma das Temperaturas Diárias", fontsize=16)
@@ -239,9 +228,7 @@ class VisualizadorClimatico:
         sns.set_theme(style=style)
         fig, ax1 = self._criar_figura_e_eixo(figsize=(12, 8))
         fig.suptitle('Análise Mensal: Temperatura vs. Precipitação', fontsize=16, weight='bold')
-
-        # --- Barras de Precipitação ---
-        # Adicionamos edgecolor para definir melhor as barras
+        
         bar_plot = sns.barplot(
             x=const.COL_DATA,
             y='precipitacao_total',
@@ -255,7 +242,6 @@ class VisualizadorClimatico:
         ax1.tick_params(axis='y', labelcolor='blue')
         ax1.set_xlabel('Mês / Ano', fontsize=12)
 
-        # ALTERAÇÃO 1: Adicionar rótulos de dados nas barras de precipitação
         for p in bar_plot.patches:
             ax1.annotate(f'{p.get_height():.1f}',
                          (p.get_x() + p.get_width() / 2., p.get_height()),
@@ -277,7 +263,6 @@ class VisualizadorClimatico:
         ax2.set_ylabel('Temperatura Média (°C)', color='red', fontsize=12)
         ax2.tick_params(axis='y', labelcolor='red')
 
-        # ALTERAÇÃO 2: Adicionar rótulos de dados nos pontos de temperatura
         for i, txt in enumerate(dados_resetados['temperatura_media']):
             ax2.annotate(f'{txt:.1f}°C', (dados_resetados.index[i], dados_resetados['temperatura_media'][i]),
                          textcoords="offset points",
