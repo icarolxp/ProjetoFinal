@@ -29,8 +29,7 @@ O projeto foi desenvolvido seguindo uma abordagem modular, separando as funciona
     * `analisador.py`: Presumivelmente, contém lógica para processar e extrair insights dos dados.
     * `estacao.py`: Pode simular ou interagir com dados de uma estação meteorológica.
     * `visualizador.py`: Provavelmente responsável por apresentar os dados de forma gráfica ou textual.
-    * `utils.py`: Para funções utilitárias e auxiliares reutilizáveis em todo o projeto.
-    * `main.py`: O ponto de entrada principal para executar o projeto e suas funcionalidades.
+    * `app.py`: O ponto de entrada principal para executar o projeto e suas funcionalidades.
 
 3.  **Gestão de Dados:**
     * Presença de um arquivo `dados/clima.csv` indica o uso de dados CSV para as análises.
