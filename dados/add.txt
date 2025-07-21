@@ -1,0 +1,8 @@
+📊 Temperatura Média: 28.7 °C
+📉 Temperatura Mínima: 20.1 °C
+📈 Temperatura Máxima: 37.0 °C
+💧 Umidade Média: 65.4 %
+📉 Desvio Padrão da Umidade: 14.13
+🌬️ Vento Médio: 15.1 km/h
+🌧️ Dias com precipitação > 10.0mm: 30
+
