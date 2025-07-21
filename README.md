@@ -17,6 +17,7 @@ O desenvolvimento deste projeto utilizou as seguintes ferramentas e linguagens:
 * **Terminal (Linux/WSL)**: Ambiente de linha de comando utilizado para interagir com o Git e executar o projeto.
 * **Nano**: Editor de texto utilizado no terminal para mensagens de commit e merge.
 * **VsCode**:  O Visual Studio Code oferece integração nativa com sistemas de controle de versão, como o Git, tornando mais fácil para gerenciar e rastrear as mudanças no código-fonte.
+* **CustomTkinter**: Para a personalização da interface.
 
 ---
 
@@ -53,11 +54,47 @@ O projeto foi desenvolvido seguindo uma abordagem modular, separando as funciona
 2.  **Instale as dependências:**
     ```bash
     # Exemplo:
-    # pip install pandas matplotlib
-    ```
+    # pip install pandas matplotlib customtkinter
 
+3. **Coloque seu arquivo clima.csv no mesmo diretório do projeto ou ajuste o caminho no app.py.**
+
+4. **Execute a aplicação:**
+   ```bash
+   python app.py
+
+## 📌 Requisitos
+Python 3.8+
+
+Bibliotecas: pandas, matplotlib, customtkinter
 
 ---
+
+## 📋 Funcionalidades
+
+- 📅 Listar datas disponíveis no arquivo de dados
+- 📊 Exibir estatísticas gerais (média, máxima, mínima)
+- 🔥 Listar dias mais quentes
+- 💧 Listar dias com maior umidade, vento ou precipitação
+- 🔍 Filtrar dados por intervalo de datas
+- 📈 Gerar gráficos interativos por variável
+
+## 💾 Formato esperado do arquivo `arquivo.csv`
+
+O arquivo `.csv` deve conter, pelo menos, as seguintes colunas (com variação de nomes aceita, pois o sistema faz normalização):
+
+- `Data`
+- `Temperatura (°C)`
+- `Umidade (%)`
+- `Velocidade do vento (km/h)`
+- `Precipitação (mm)`
+
+### Exemplo de conteúdo:
+
+```csv
+Data,Temperatura (°C),Umidade (%),Velocidade do vento (km/h),Precipitação (mm)
+2025-01-01,32.1,75,10.2,5.0
+2025-01-02,31.4,78,8.5,2.3
+...
 
 ## 🤝 Contribuição
 
